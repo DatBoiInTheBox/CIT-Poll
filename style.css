@@ -68,3 +68,26 @@ font-size:calc(var(--u)*3.6);font-weight:700;min-height:calc(var(--u)*11);border
 .k.sp{max-width:none;flex:6}
 .k.on{background:var(--acc);color:#10202b}
 .k:active{background:var(--acc);color:#10202b}
+
+/* v2: images, progress, settings */
+.dots button{width:calc(var(--u)*3.6);height:calc(var(--u)*3.6);padding:0;background:none;position:relative}
+.dots button::after{content:"";position:absolute;inset:28%;border-radius:50%;background:var(--panel2)}
+.dots button.on::after{background:var(--acc)}
+.pimg{max-height:26vh;max-width:100%;object-fit:contain;border-radius:var(--r);align-self:flex-start}
+.oimg{width:calc(var(--u)*10);height:calc(var(--u)*10);object-fit:var(--fit,cover);border-radius:calc(var(--u)*1.2);flex:none;background:var(--bg)}
+.rimg{width:calc(var(--u)*4.6);height:calc(var(--u)*4.6);object-fit:var(--fit,cover);border-radius:calc(var(--u)*.8);margin-right:calc(var(--u)*1.2);vertical-align:middle}
+.prog{height:calc(var(--u)*.7);background:var(--panel)}
+.prog i{display:block;height:100%;width:100%;background:var(--acc);transform-origin:left;animation:pg linear forwards}
+@keyframes pg{from{transform:scaleX(1)}to{transform:scaleX(0)}}
+.toast{position:fixed;top:calc(var(--u)*2);left:50%;transform:translateX(-50%);background:var(--bad);color:#fff;padding:calc(var(--u)*1.6) calc(var(--u)*3);border-radius:var(--r);font-size:calc(var(--u)*2.4);z-index:60}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,46vmin),1fr));gap:var(--u) calc(var(--u)*3)}
+.srow{display:flex;justify-content:space-between;align-items:center;gap:var(--u);font-size:calc(var(--u)*2.4);padding:calc(var(--u)*.6) 0}
+.st{display:flex;align-items:center;gap:var(--u)}.st b{min-width:calc(var(--u)*9);text-align:center}
+.st .b{padding:calc(var(--u)*1) calc(var(--u)*2.4)}
+.sw2{width:calc(var(--u)*5);height:calc(var(--u)*5);border-radius:50%;border:3px solid transparent}
+.sw2.on{border-color:var(--ink)}
+.thumb{width:calc(var(--u)*7);height:calc(var(--u)*7);object-fit:cover;border-radius:calc(var(--u)*1);flex:none}
+.thumbbtn{width:calc(var(--u)*7);height:calc(var(--u)*7);flex:none;padding:0;overflow:hidden;background:var(--bg);font-size:calc(var(--u)*3)}
+.thumbbtn img{width:100%;height:100%;object-fit:cover}
+.orow{flex-wrap:wrap}.orow .f{flex:1;min-width:30%;width:auto}
+.hd{margin:calc(var(--u)*1) 0 0;font-size:calc(var(--u)*2.4);color:var(--acc)}
